@@ -127,7 +127,7 @@ bindkey "\e\e[D" backward-word
 bindkey "\e\e[C" forward-word
 
 # Python
-eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 
 # Env variables
 PATH=${PATH}:~/Tools/own-bin
