@@ -136,8 +136,9 @@ eval "$(pyenv init --path)"
 PATH=${PATH}:~/Tools/own-bin
 
 #########################################################################
-# Kubectl
+# Kubernetes
 #########################################################################
+# Kubectl
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 alias kubectl="kubecolor"
 command -v kubecolor >/dev/null 2>&1 && alias kubectl="kubecolor"
@@ -147,6 +148,12 @@ compdef kubecolor=kubectl
 
 alias k=kubectl
 complete -F __start_kubectl k
+
+# Helm
+source <(helm completion zsh)
+
+# Flux
+command -v flux >/dev/null && . <(flux completion zsh)
 ##########################################################################
 
 # Nvm
