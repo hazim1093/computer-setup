@@ -126,16 +126,28 @@ export PATH="/usr/local/opt/m4/bin:$PATH"
 bindkey "\e\e[D" backward-word
 bindkey "\e\e[C" forward-word
 
+# SSH Agent
+[ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)"
+
 # Python
 eval "$(pyenv init --path)"
 
 # Env variables
 PATH=${PATH}:~/Tools/own-bin
 
+#########################################################################
 # Kubectl
+#########################################################################
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+alias kubectl="kubecolor"
+command -v kubecolor >/dev/null 2>&1 && alias kubectl="kubecolor"
+
+# make completion work with kubecolor
+compdef kubecolor=kubectl
+
 alias k=kubectl
 complete -F __start_kubectl k
+##########################################################################
 
 # Nvm
 export NVM_DIR="$HOME/.nvm"
