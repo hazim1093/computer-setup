@@ -25,6 +25,7 @@ rules:
           - go
           - java
           - log
+          - xml
     actions:
       - move: ~/Downloads/Code/
 
@@ -36,7 +37,7 @@ rules:
           - png
           - jpg
           - gif
-          - tiff
+          - tif
           - heic
           - svg
     actions:
@@ -68,7 +69,7 @@ rules:
       - extension:
           - zip
           - tgz
-          - tar.gz
+          - gz
     actions:
       - move: ~/Downloads/Compressed/
 
