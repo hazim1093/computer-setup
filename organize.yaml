@@ -1,0 +1,59 @@
+rules:
+  # Documents in Downlaods
+  - folders: ~/Downloads
+    filters:
+      - extension:
+          - pdf
+          - doc
+          - docx
+          - txt
+          - csv
+          - xlsx
+    actions:
+      - move: ~/Downloads/Documents/
+
+  # Code files in Downlaods
+  - folders: ~/Downloads
+    filters:
+      - extension:
+          - yaml
+          - json
+          - sh
+          - go
+          - java
+          - log
+    actions:
+      - move: ~/Downloads/Code/
+
+  # Images in Downlaods
+  - folders: ~/Downloads
+    filters:
+      - extension:
+          - jpeg
+          - png
+          - jpg
+          - gif
+          - tiff
+          - heic
+    actions:
+      - move: ~/Downloads/Images/
+
+  # Installers in Downlaods
+  - folders: ~/Downloads
+    filters:
+      - extension:
+          - dmg
+          - pkg
+    actions:
+      - move: ~/Downloads/Installers/
+  - folders: ~/Downloads/Installers
+    subfolders: true
+    filters:
+      - extension:
+          - dmg
+          - pkg
+      - lastmodified:
+          days: 15
+          mode: older
+    actions:
+      - trash
