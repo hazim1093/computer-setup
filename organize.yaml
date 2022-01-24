@@ -8,7 +8,10 @@ rules:
           - docx
           - txt
           - csv
+          - xls
           - xlsx
+          - ppt
+          - pptx
     actions:
       - move: ~/Downloads/Documents/
 
@@ -35,6 +38,7 @@ rules:
           - gif
           - tiff
           - heic
+          - svg
     actions:
       - move: ~/Downloads/Images/
 
@@ -57,3 +61,31 @@ rules:
           mode: older
     actions:
       - trash
+
+  # Compressed in Downlaods
+  - folders: ~/Downloads
+    filters:
+      - extension:
+          - zip
+          - tgz
+          - tar.gz
+    actions:
+      - move: ~/Downloads/Compressed/
+
+  # Videos in Downlaods
+  - folders: ~/Downloads
+    filters:
+      - extension:
+          - mp4
+          - mov
+    actions:
+      - move: ~/Downloads/Videos/
+
+  # Audio in Downlaods
+  - folders: ~/Downloads
+    filters:
+      - extension:
+          - mp3
+          - m4r
+    actions:
+      - move: ~/Downloads/Audio/
