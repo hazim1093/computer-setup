@@ -4,3 +4,6 @@
 * [hazims-iterm2-profile.json](hazims-iterm2-profile.json):  Profile for iterm2
 * [organize.yaml](organize.yaml): Rules file for [organize](https://github.com/tfeldmann/organize)
 * [automator-actions](automator-actions): MacOS Automator action packages
+
+## Related links
+- Terminal themes gist: https://gist.github.com/kevin-smets/8568070
