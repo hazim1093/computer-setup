@@ -12,6 +12,7 @@ rules:
           - xlsx
           - ppt
           - pptx
+          - md
     actions:
       - move: ~/Downloads/Documents/
 
@@ -26,6 +27,7 @@ rules:
           - java
           - log
           - xml
+          - py
     actions:
       - move: ~/Downloads/Code/
 
