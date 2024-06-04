@@ -1,0 +1,71 @@
+{
+    "[terraform]": {
+      "editor.formatOnSave": true
+    },
+    "[yaml]": {
+      "editor.formatOnSave": false
+    },
+    "debug.internalConsoleOptions": "neverOpen",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.renderWhitespace": "none",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 700,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true,
+
+    "git.confirmSync": false,
+
+    "go.lintTool": "golangci-lint",
+    "go.testTimeout": "120s",
+
+    "Notes.notesLocation": "~/wd/vscode-notes",
+
+    "peacock.affectTabActiveBorder": true,
+    "peacock.surpriseMeOnStartup": true,
+
+    "python.terminal.activateEnvironment": false,
+
+    "redhat.telemetry.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+
+    "todo-tree.general.tags": [
+      "BUG",
+      "HACK",
+      "FIXME",
+      "TODO",
+      "XXX",
+      "[ ]",
+      "[x]"
+    ],
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "todo-tree.tree.showScanModeButton": false,
+
+    "vs-kubernetes": {
+      "vs-kubernetes.crd-code-completion": "disabled",
+      "vs-kubernetes.ignore-recommendations": true,
+      "vscode-kubernetes.kubectl-path.mac": "~/.vs-kubernetes/tools/kubectl/kubectl",
+      "vscode-kubernetes.helm-path.mac": "~/.vs-kubernetes/tools/helm/darwin-amd64/helm",
+      "vscode-kubernetes.minikube-path.mac": "~/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
+    },
+    "vscode-kubernetes.helm-path": "$(which helm)",
+    // "vscode-kubernetes.helm-path.mac": "/usr/local/bin/helm",
+    "vscode-kubernetes.kubectl-path": "~/.vscode/binaries/kubectl",
+    "workbench.colorTheme": "Dracula At Night",
+    "workbench.editorAssociations": {
+      "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.productIconTheme": "icons-carbon",
+    "rapidapi.terminalLink.enabled": false,
+    "terminal.external.osxExec": "iTerm.app",
+    "keyboard.dispatch": "keyCode",
+    "git.suggestSmartCommit": false,
+    "[python]": {
+      "editor.formatOnType": true
+    },
+    "application.shellEnvironmentResolutionTimeout": 15,
+    "window.zoomLevel": 0.5,
+  }

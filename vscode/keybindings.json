@@ -1,0 +1,21 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "cmd+`",
+        "command": "terminal.open"
+    },
+    {
+        "key": "ctrl+alt+o",
+        "command": "-terminal.open"
+    },
+    {
+        "key": "shift+cmd+7",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+/",
+        "command": "-editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    }
+]
