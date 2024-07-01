@@ -47,12 +47,20 @@ source <(helm completion zsh)
 
 # Flux
 command -v flux >/dev/null && . <(flux completion zsh)
+# Krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
 ##########################################################################
 
 # Docker / lima
-alias d="lima nerdctl"
+#alias d="lima nerdctl"
+
+# Podman
+export DOCKER_HOST='unix:///Users/ext.hazim.malik/.local/share/containers/podman/machine/podman-machine-default/podman.sock'
 
 # Google cloud
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
