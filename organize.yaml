@@ -1,5 +1,7 @@
+#TODO: Migrate to organize v3
+
 rules:
-  # Documents in Downlaods
+  # Documents in Downloads
   - folders: ~/Downloads
     filters:
       - extension:
@@ -16,7 +18,7 @@ rules:
     actions:
       - move: ~/Downloads/Documents/
 
-  # Code files in Downlaods
+  # Code files in Downloads
   - folders: ~/Downloads
     filters:
       - extension:
@@ -30,10 +32,11 @@ rules:
           - xml
           - py
           - diff
+          - html
     actions:
       - move: ~/Downloads/Code/
 
-  # Images in Downlaods
+  # Images in Downloads
   - folders: ~/Downloads
     filters:
       - extension:
@@ -47,12 +50,13 @@ rules:
     actions:
       - move: ~/Downloads/Images/
 
-  # Installers in Downlaods
+  # Installers in Downloads
   - folders: ~/Downloads
     filters:
       - extension:
           - dmg
           - pkg
+          - iso
     actions:
       - move: ~/Downloads/Installers/
   - folders: ~/Downloads/Installers
@@ -67,7 +71,7 @@ rules:
     actions:
       - trash
 
-  # Compressed in Downlaods
+  # Compressed in Downloads
   - folders: ~/Downloads
     filters:
       - extension:
@@ -77,7 +81,7 @@ rules:
     actions:
       - move: ~/Downloads/Compressed/
 
-  # Videos in Downlaods
+  # Videos in Downloads
   - folders: ~/Downloads
     filters:
       - extension:
@@ -86,7 +90,7 @@ rules:
     actions:
       - move: ~/Downloads/Videos/
 
-  # Audio in Downlaods
+  # Audio in Downloads
   - folders: ~/Downloads
     filters:
       - extension:
