@@ -1,8 +1,7 @@
-#TODO: Migrate to organize v3
 
 rules:
   # Documents in Downloads
-  - folders: ~/Downloads
+  - locations: ~/Downloads
     filters:
       - extension:
           - pdf
@@ -19,7 +18,7 @@ rules:
       - move: ~/Downloads/Documents/
 
   # Code files in Downloads
-  - folders: ~/Downloads
+  - locations: ~/Downloads
     filters:
       - extension:
           - yaml
@@ -37,7 +36,7 @@ rules:
       - move: ~/Downloads/Code/
 
   # Images in Downloads
-  - folders: ~/Downloads
+  - locations: ~/Downloads
     filters:
       - extension:
           - jpeg
@@ -51,7 +50,7 @@ rules:
       - move: ~/Downloads/Images/
 
   # Installers in Downloads
-  - folders: ~/Downloads
+  - locations: ~/Downloads
     filters:
       - extension:
           - dmg
@@ -59,7 +58,7 @@ rules:
           - iso
     actions:
       - move: ~/Downloads/Installers/
-  - folders: ~/Downloads/Installers
+  - locations: ~/Downloads/Installers
     subfolders: true
     filters:
       - extension:
@@ -72,7 +71,7 @@ rules:
       - trash
 
   # Compressed in Downloads
-  - folders: ~/Downloads
+  - locations: ~/Downloads
     filters:
       - extension:
           - zip
@@ -82,7 +81,7 @@ rules:
       - move: ~/Downloads/Compressed/
 
   # Videos in Downloads
-  - folders: ~/Downloads
+  - locations: ~/Downloads
     filters:
       - extension:
           - mp4
@@ -91,7 +90,7 @@ rules:
       - move: ~/Downloads/Videos/
 
   # Audio in Downloads
-  - folders: ~/Downloads
+  - locations: ~/Downloads
     filters:
       - extension:
           - mp3

@@ -6,4 +6,5 @@
 * [automator-actions](automator-actions): MacOS Automator action packages
 
 ## Related links
+
 - Terminal themes gist: https://gist.github.com/kevin-smets/8568070

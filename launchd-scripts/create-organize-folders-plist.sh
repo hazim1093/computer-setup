@@ -21,7 +21,6 @@ cat <<EOF > "$PLIST_PATH"
     <array>
         <string>$HOME/.pyenv/shims/organize</string>
         <string>run</string>
-        <string>--config-file</string>
         <string>${PARENT_DIR}/organize.yaml</string>
     </array>
     <key>WatchPaths</key>
