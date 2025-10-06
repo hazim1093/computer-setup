@@ -9,3 +9,4 @@ formatter:
   indent: 2
   retain_line_breaks_single: true
   indentless_arrays: true
+  max_line_length: 80

@@ -3,8 +3,10 @@
       "editor.formatOnSave": true
     },
     "[yaml]": {
-      "editor.formatOnSave": false
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "bluebrown.yamlfmt",
     },
+    "editor.wordWrap": "on",
     "debug.internalConsoleOptions": "neverOpen",
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.renderWhitespace": "none",
@@ -19,7 +21,7 @@
     "go.lintTool": "golangci-lint",
     "go.testTimeout": "120s",
 
-    "Notes.notesLocation": "~/wd/vscode-notes",
+    "Notes.notesLocation": "/Users/hazim/wd/vscode-notes",
 
     "peacock.affectTabActiveBorder": true,
     "peacock.surpriseMeOnStartup": true,
@@ -67,5 +69,75 @@
       "editor.formatOnType": true
     },
     "application.shellEnvironmentResolutionTimeout": 15,
-    "window.zoomLevel": 0.5,
+    "cSpell.userWords": [
+      "apiextensions",
+      "azuread",
+      "azurecr",
+      "clusteroperator",
+      "clusterrolebinding",
+      "Configurator",
+      "crossplane",
+      "Entra",
+      "entraid",
+      "gitops",
+      "hazim",
+      "kaniko",
+      "keypair",
+      "kubeadmin",
+      "kubeconfig",
+      "kubeconform",
+      "Kustomization",
+      "kustomize",
+      "Kyverno",
+      "mapstructure",
+      "nolint",
+      "ocds",
+      "resty",
+      "ROSCA",
+      "secretstore",
+      "serviceaccount",
+      "serviceaccounts",
+      "stakater",
+      "upbound",
+      "Velero",
+      "yamlfmt",
+      "zerolog",
+      "zetachain"
+    ],
+    // "editor.inlineSuggest.enabled": true,
+    "makefile.configureOnOpen": true,
+    "search.useIgnoreFiles": true,
+    "search.useGlobalIgnoreFiles": true,
+    "yamlfmt.args": [
+      "-conf",
+      "/Users/hazim/config/yamlfmt/yamlfmt.yaml"
+    ],
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "explorer.confirmPasteNative": false,
+    "solidity.telemetry": false,
+    // "github.copilot.enable": {
+    //   "*": true,
+    //   "plaintext": false,
+    //   "markdown": false,
+    //   "scminput": false
+    // },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "go.toolsManagement.autoUpdate": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "docker.extension.enableComposeLanguageServer": false,
+    "python.defaultInterpreterPath": "/usr/local/bin/python3",
+    "[dockercompose]": {
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2,
+      "editor.autoIndent": "advanced",
+      "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+      "editor.defaultFormatter": "redhat.vscode-yaml"
+    }
+
   }

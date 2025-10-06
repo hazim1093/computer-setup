@@ -1,6 +1,6 @@
 ##############################
 ##############################
-# Own config 
+# Own config
 ##############################
 ##############################
 
@@ -20,10 +20,11 @@ bindkey "\e\e[C" forward-word
 [ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)"
 
 # Python
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
-
 # Env variables
-PATH=${PATH}:~/Tools/own-bin
+export PATH=${PATH}:~/Tools/own-bin:~/.local/bin
 
 #########################################################################
 # Kubernetes
@@ -52,22 +53,11 @@ export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 ##########################################################################
 
-# Docker / lima
-#alias d="lima nerdctl"
-
-# Podman
-export DOCKER_HOST='unix:///Users/ext.hazim.malik/.local/share/containers/podman/machine/podman-machine-default/podman.sock'
-
 # Google cloud
-source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-
-# Node
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+#source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+#source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+#source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+#export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # Go
 export GOBIN="$HOME/go/bin"
@@ -82,6 +72,15 @@ bindkey '\e\e.' copy-earlier-word
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/ext.hazim.malik/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+# Nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+if [ /Users/hazim/Tools/own-bin/oc ]; then
+  source <(oc completion zsh)
+  compdef _oc oc
+fi
+
+alias claude="/Users/hazim/.claude/local/claude"
