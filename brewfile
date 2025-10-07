@@ -1,10 +1,10 @@
 # Imported file
 
+# Tools
 brew "act"
 brew "ansible"
 brew "ansible-lint"
 brew "foundry"
-brew "fzf"
 brew "go@1.25"
 brew "golangci-lint"
 brew "helm"
@@ -21,11 +21,15 @@ brew "tmux"
 brew "watch"
 brew "wget"
 brew "gh"
-brew "zsh-syntax-highlighting"
 cask "font-hack-nerd-font"
 cask "google-cloud-sdk"
 cask "kitty"
 brew "yq"
+
+# Personalization
+brew "zsh-syntax-highlighting"
+brew "fzf"
+cask "rectangle"
 
 # VSCode
 vscode "arcticicestudio.nord-visual-studio-code"
