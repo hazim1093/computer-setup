@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 PLIST_PATH="$HOME/Library/LaunchAgents/com.hazim1093.OrganizeFolders.plist"
 SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
@@ -10,6 +11,8 @@ WATCH_PATHS=(
 )
 
 # Create or modify the plist file
+mkdir -p "$(dirname "$PLIST_PATH")"
+
 cat <<EOF > "$PLIST_PATH"
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
