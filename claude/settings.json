@@ -1,11 +1,6 @@
 {
   "permissions": {
     "allow": [
-      "Read(//Users/hazim/zeta/repos/artifacts/helm/mcp-server/**)",
-      "Bash(find /Users/hazim/zeta/repos/infrastructure/spacelift/gcp -name \"*.tf\" ! -path \"*/.terraform/*\" -exec grep \"member.*zetachain\" {} +)",
-      "Bash(grep -E \"\\\\.tf$\")",
-      "Bash(grep -r \"google_artifact_registry.*iam\\\\|artifact.*iam\" /Users/hazim/zeta/repos/infrastructure/spacelift/gcp --include=\"*.tf\" ! -path \"*/.terraform/*\")",
-
       "Bash(git status:*)",
       "Bash(git diff:*)",
       "Bash(git log:*)",
@@ -20,7 +15,20 @@
       "Bash(git switch:*)",
       "Bash(git restore:*)",
       "Bash(git remote:*)",
-
+      "Bash(git rev-parse:*)",
+      "Bash(git rev-list:*)",
+      "Bash(git describe:*)",
+      "Bash(git ls-files:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(git show-ref:*)",
+      "Bash(git for-each-ref:*)",
+      "Bash(git merge-base:*)",
+      "Bash(git cat-file:*)",
+      "Bash(git blame:*)",
+      "Bash(git name-rev:*)",
+      "Bash(git shortlog:*)",
+      "Bash(git config --get:*)",
+      "Bash(git config --list:*)",
       "Bash(kubectl get:*)",
       "Bash(kubectl describe:*)",
       "Bash(kubectl logs:*)",
@@ -31,7 +39,6 @@
       "Bash(kubectl config get-contexts:*)",
       "Bash(kubectl config current-context:*)",
       "Bash(kubectl config view:*)",
-
       "Bash(helm list:*)",
       "Bash(helm status:*)",
       "Bash(helm get:*)",
@@ -40,7 +47,6 @@
       "Bash(helm repo:*)",
       "Bash(helm template:*)",
       "Bash(helm diff:*)",
-
       "Bash(terraform plan:*)",
       "Bash(terraform validate:*)",
       "Bash(terraform fmt:*)",
@@ -55,31 +61,33 @@
       "Bash(tofu validate:*)",
       "Bash(tofu show:*)",
       "Bash(tofu output:*)",
-
       "Bash(spacectl stack list:*)",
       "Bash(spacectl stack show:*)",
       "Bash(spacectl stack local-preview:*)",
       "Bash(spacectl version:*)",
-
       "Bash(docker ps:*)",
       "Bash(docker images:*)",
       "Bash(docker logs:*)",
       "Bash(docker inspect:*)",
-
       "Bash(go build:*)",
       "Bash(go test:*)",
       "Bash(go vet:*)",
       "Bash(go run:*)",
       "Bash(go mod:*)",
-
       "Bash(dig:*)",
       "Bash(nslookup:*)",
       "Bash(host:*)",
       "Bash(jq:*)",
       "Bash(yq:*)",
-
       "Read(//Users/hazim/repos/**)",
       "Read(//Users/hazim/zeta/repos/**)",
+      "Edit(//Users/hazim/repos/**)",
+      "Edit(//Users/hazim/zeta/repos/**)",
+      "Write(//Users/hazim/repos/**)",
+      "Write(//Users/hazim/zeta/repos/**)",
+      "Bash(cd:*)",
+      "Bash(echo:*)",
+      "Bash(find:*)",
       "Bash(grep:*)",
       "Bash(rg:*)",
       "Bash(cat:*)",
@@ -96,7 +104,58 @@
       "Bash(uniq:*)",
       "Bash(cut:*)",
       "Bash(column:*)",
-      "Bash(diff:*)"
+      "Bash(diff:*)",
+      "Bash(actionlint:*)",
+      "Bash(shellcheck:*)",
+      "Bash(yamllint:*)",
+      "Bash(node --check:*)",
+      "mcp__grafana-dev__analyze_*",
+      "mcp__grafana-dev__check_*",
+      "mcp__grafana-dev__find_*",
+      "mcp__grafana-dev__generate_*",
+      "mcp__grafana-dev__get_*",
+      "mcp__grafana-dev__list_*",
+      "mcp__grafana-dev__query_*",
+      "mcp__grafana-dev__search_*",
+      "mcp__grafana-dev__suggest_*",
+      "mcp__grafana-dev__validate_*",
+      "mcp__grafana-prod__analyze_*",
+      "mcp__grafana-prod__check_*",
+      "mcp__grafana-prod__find_*",
+      "mcp__grafana-prod__generate_*",
+      "mcp__grafana-prod__get_*",
+      "mcp__grafana-prod__list_*",
+      "mcp__grafana-prod__query_*",
+      "mcp__grafana-prod__search_*",
+      "mcp__grafana-prod__suggest_*",
+      "mcp__grafana-prod__validate_*",
+      "mcp__plugin_datadog_mcp__aggregate_*",
+      "mcp__plugin_datadog_mcp__analyze_*",
+      "mcp__plugin_datadog_mcp__get_*",
+      "mcp__plugin_datadog_mcp__list_*",
+      "mcp__plugin_datadog_mcp__load_*",
+      "mcp__plugin_datadog_mcp__search_*",
+      "mcp__incident-io__ask*",
+      "mcp__incident-io__catalog_*",
+      "mcp__incident-io__resource_*",
+      "mcp__incident-io__schedule_*",
+      "mcp__incident-io__team_*",
+      "mcp__incident-io__user_*",
+      "mcp__incident-io__alert_list",
+      "mcp__incident-io__alert_show",
+      "mcp__incident-io__alert_source_list",
+      "mcp__incident-io__alert_stats",
+      "mcp__incident-io__escalation_list",
+      "mcp__incident-io__escalation_path_list",
+      "mcp__incident-io__escalation_path_show",
+      "mcp__incident-io__escalation_show",
+      "mcp__incident-io__escalation_stats",
+      "mcp__incident-io__follow_up_list",
+      "mcp__incident-io__follow_up_stats",
+      "mcp__incident-io__incident_list",
+      "mcp__incident-io__incident_show",
+      "mcp__incident-io__incident_stats",
+      "mcp__incident-io__incident_update_list"
     ],
     "deny": [
       "Bash(rm -rf /)",
@@ -138,6 +197,10 @@
       "Bash(docker rmi:*)",
       "Bash(docker volume rm:*)",
       "Bash(docker system prune:*)"
+    ],
+    "additionalDirectories": [
+      "/Users/hazim/repos",
+      "/Users/hazim/zeta/repos"
     ]
   },
   "hooks": {
@@ -148,6 +211,32 @@
           {
             "type": "command",
             "command": "$HOME/.claude/hooks/block-dangerous.py"
+          },
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/kubectl-reads.py"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/notify.py"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/notify.py"
           }
         ]
       }
@@ -164,5 +253,6 @@
   },
   "theme": "auto",
   "agentPushNotifEnabled": true,
-  "tui": "fullscreen"
+  "tui": "fullscreen",
+  "model": "opus[1m]"
 }

@@ -48,5 +48,7 @@ deploy() {
 
 deploy "settings.json"
 deploy "hooks/block-dangerous.py"
-chmod +x "$REPO/hooks/block-dangerous.py"
+deploy "hooks/notify.py"
+deploy "hooks/kubectl-reads.py"
+chmod +x "$REPO/hooks/block-dangerous.py" "$REPO/hooks/notify.py" "$REPO/hooks/kubectl-reads.py"
 echo "done."

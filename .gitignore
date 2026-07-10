@@ -1,0 +1,8 @@
+# OS / editor cruft
+.DS_Store
+
+# Safety net: never commit live Claude Code state (transcripts, creds, caches)
+# or machine-local permission overrides if any ever land under this repo.
+.claude/
+claude/**/settings.local.json
+*.bak.*

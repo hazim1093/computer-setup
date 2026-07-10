@@ -47,6 +47,10 @@ DANGEROUS_PATTERNS = [
      "redirect into a raw block device"),
     (r"\bchmod\s+-R\s+0?777\s+/(?:\s|$)",
      "recursive chmod 777 on /"),
+    (r"\bfind\b[^\n]*\s-delete\b",
+     "find ... -delete"),
+    (r"\bfind\b[^\n]*-exec\b[^\n]*\brm\b",
+     "find ... -exec rm"),
     (r"\b(?:shutdown|reboot|halt|poweroff)\b",
      "host power / reboot command"),
 
