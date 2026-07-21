@@ -203,6 +203,7 @@
       "/Users/hazim/zeta/repos"
     ]
   },
+  "model": "opus[1m]",
   "hooks": {
     "PreToolUse": [
       {
@@ -249,10 +250,18 @@
     "superpowers@superpowers-marketplace": true,
     "superpowers-developing-for-claude-code@superpowers-marketplace": true,
     "gopls-lsp@claude-plugins-official": true,
-    "datadog@claude-plugins-official": true
+    "datadog@claude-plugins-official": true,
+    "cloud-finops@optimnow": true
   },
-  "theme": "auto",
-  "agentPushNotifEnabled": true,
+  "extraKnownMarketplaces": {
+    "optimnow": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/OptimNow/cloud-finops-skills.git"
+      }
+    }
+  },
   "tui": "fullscreen",
-  "model": "opus[1m]"
+  "theme": "auto",
+  "agentPushNotifEnabled": true
 }
